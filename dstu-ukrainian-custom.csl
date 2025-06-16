@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+  <info>
+    <title>Dstu-Ukrainian-Custom</title>
+    <id>http://www.z-custom.org/styles/dstu-ukrainian-custom</id>
+    <link href="http://www.z-custom.org/styles/dstu-ukrainian-custom" rel="self"/>
+    <author>Custom by ChatGPT</author>
+    <category citation-format="author-date"/>
+    <updated>2025-06-16T00:00:00+00:00</updated>
+  </info>
+  <macro name="title">
+    <text variable="title" prefix="" suffix=" [Electronic resource]" text-case="title"/>
+  </macro>
+  <macro name="author">
+    <names variable="author">
+      <name and="text" delimiter=", " initialize-with="." name-as-sort-order="all"/>
+      <label form="short" prefix=" " text-case="lowercase"/>
+    </names>
+  </macro>
+  <bibliography et-al-min="5" et-al-use-first="4">
+    <layout suffix=".">
+      <text macro="author" suffix=". "/>
+      <text macro="title" suffix=" / "/>
+      <names variable="author">
+        <name and="text" delimiter=", " initialize-with="."/>
+        <et-al font-style="italic"/>
+      </names>
+      <text variable="container-title" prefix=" // " suffix=" – Electronic magazine. – "/>
+      <date variable="issued" suffix=". – "/>
+      <text variable="volume" prefix="Vol. " suffix=", "/>
+      <text variable="issue" prefix="No " suffix=". – "/>
+      <text variable="page" prefix="P. " suffix=". – "/>
+      <group>
+        <text value="Режим доступу: "/>
+        <text variable="DOI" prefix="https://doi.org/"/>
+        <text variable="URL"/>
+        <text value=", вільний. – Назва з екрану."/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
