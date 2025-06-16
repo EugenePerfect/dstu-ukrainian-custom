@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
   <info>
     <title>Dstu-Ukrainian-Custom</title>
-    <id>http://www.z-custom.org/styles/dstu-ukrainian-custom</id>
-    <link href="http://www.z-custom.org/styles/dstu-ukrainian-custom" rel="self"/>
-    <author>Custom by ChatGPT</author>
+    <id>https://raw.githubusercontent.com/EugenePerfect/dstu-ukrainian-custom/main/dstu-ukrainian-custom.csl</id>
+    <link href="https://raw.githubusercontent.com/EugenePerfect/dstu-ukrainian-custom/main/dstu-ukrainian-custom.csl" rel="self"/>
+    <author><name>Eugene Perfect</name></author>
     <category citation-format="author-date"/>
     <updated>2025-06-16T00:00:00+00:00</updated>
   </info>
@@ -17,6 +17,20 @@
       <label form="short" prefix=" " text-case="lowercase"/>
     </names>
   </macro>
+  <!-- Citation -->
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout prefix="[" suffix="]" delimiter=",">
+      <text variable="citation-number"/>
+      <!-- Следующее должно неплохо работать для многих случаев, но точность отображения терминов (с., т., ч. и т.п.) определяется файлом русской локали, который не всегда совпадает с ГОСТ-ом -->
+      <group prefix=", " delimiter=" ">
+        <label variable="locator" form="short" plural="never"/>
+        <text variable="locator"/>
+      </group>
+    </layout>
+  </citation>
   <bibliography et-al-min="5" et-al-use-first="4">
     <layout suffix=".">
       <text macro="author" suffix=". "/>
@@ -26,7 +40,9 @@
         <et-al font-style="italic"/>
       </names>
       <text variable="container-title" prefix=" // " suffix=" – Electronic magazine. – "/>
-      <date variable="issued" suffix=". – "/>
+      <date variable="issued" suffix=". – ">
+        <date-part name="year"/>
+      </date>
       <text variable="volume" prefix="Vol. " suffix=", "/>
       <text variable="issue" prefix="No " suffix=". – "/>
       <text variable="page" prefix="P. " suffix=". – "/>
