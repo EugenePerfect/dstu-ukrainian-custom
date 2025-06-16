@@ -44,7 +44,7 @@
       <date variable="issued" suffix=". – ">
         <date-part name="year"/>
       </date>
-      <text variable="volume" prefix="Vol. " suffix=". - "/>
+      <text variable="volume" prefix="Vol. " suffix=". – "/>
       <text variable="issue" prefix="No " suffix=". – "/>
       <text variable="page" prefix="P. " suffix=". – "/>
       <group>
