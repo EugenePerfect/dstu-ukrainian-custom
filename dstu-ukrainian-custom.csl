@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- https://docs.citationstyles.org/en/stable/specification.html#info -->
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
   <info>
     <title>Dstu-Ukrainian-Custom</title>
     <id>https://raw.githubusercontent.com/EugenePerfect/dstu-ukrainian-custom/main/dstu-ukrainian-custom.csl</id>
     <link href="https://raw.githubusercontent.com/EugenePerfect/dstu-ukrainian-custom/main/dstu-ukrainian-custom.csl" rel="self"/>
-    <author>
-      <name>Eugene Perfect</name>
-    </author>
+    <author><name>Eugene Perfect</name></author>
     <category citation-format="author-date"/>
     <updated>2025-06-16T00:00:00+00:00</updated>
   </info>
@@ -41,18 +40,18 @@
         <name and="text" delimiter=", " initialize-with="."/>
         <et-al font-style="italic"/>
       </names>
-      <text variable="container-title" prefix=" // " suffix=" &#8211; Electronic magazine. &#8211; "/>
-      <date variable="issued" suffix=". &#8211; ">
+      <text variable="container-title" prefix=" // " suffix=" – Electronic magazine. – "/>
+      <date variable="issued" suffix=". – ">
         <date-part name="year"/>
       </date>
-      <text variable="volume" prefix="Vol. " suffix=", "/>
-      <text variable="issue" prefix="No " suffix=". &#8211; "/>
-      <text variable="page" prefix="P. " suffix=". &#8211; "/>
+      <text variable="volume" prefix="Vol. " suffix=". - "/>
+      <text variable="issue" prefix="No " suffix=". – "/>
+      <text variable="page" prefix="P. " suffix=". – "/>
       <group>
         <text value="Режим доступу: "/>
         <text variable="DOI" prefix="https://doi.org/"/>
         <text variable="URL"/>
-        <text value=", вільний. &#8211; Назва з екрану."/>
+        <text value=", вільний. – Назва з екрану."/>
       </group>
     </layout>
   </bibliography>
